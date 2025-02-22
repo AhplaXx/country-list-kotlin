@@ -31,10 +31,10 @@ fun SetupNavGraph(navController: NavHostController,contentPadding: PaddingValues
         composable(route = "homePage") {
             HomePage(
                 countryUiState = countryViewModel.countryUiState,
-                onClick = {
-                    println("navigating")
+                onClick = { country ->
+                    navController.currentBackStackEntry?.savedStateHandle?.set("country", country)
                     navController.navigate("detailPage")
-                          },
+                },
                 modifier = Modifier,
                 contentPadding = contentPadding
             )
@@ -42,7 +42,10 @@ fun SetupNavGraph(navController: NavHostController,contentPadding: PaddingValues
 
         }
         composable(route = "detailPage"){
-            DetailScreen()
+            DetailScreen(
+                navController
+
+            )
         }
 
 

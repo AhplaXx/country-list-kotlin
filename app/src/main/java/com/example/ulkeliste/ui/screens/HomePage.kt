@@ -52,7 +52,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun HomePage(
     countryUiState: CountryUiState,
-    onClick: () -> Unit,
+    onClick: (CountryModel) -> Unit,
     modifier : Modifier = Modifier,
     contentPadding:PaddingValues = PaddingValues(0.dp)
 ){
@@ -111,7 +111,7 @@ fun CountryCard(country: CountryModel,onClick: () -> Unit, modifier: Modifier = 
 fun CountryGridScreen(
     countries: List<CountryModel>,
     modifier: Modifier = Modifier,
-    onClick: () -> Unit,
+    onClick: (CountryModel) -> Unit,
     contentPadding: PaddingValues =PaddingValues(8.dp),
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
@@ -126,7 +126,7 @@ fun CountryGridScreen(
                         .padding(4.dp)
                         .fillMaxWidth()
                         .aspectRatio(3f),
-                    onClick = onClick
+                    onClick = {onClick(country)}
 
                 )
             }
