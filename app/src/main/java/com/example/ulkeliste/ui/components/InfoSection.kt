@@ -15,6 +15,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
@@ -50,17 +51,20 @@ fun InfoSection(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 10.dp, vertical = 14.dp)
+                .padding(horizontal = 10.dp, vertical = 14.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
                 painter = painterResource(id = icon),
                 contentScale = ContentScale.Fit,
                 contentDescription = "",
                 modifier = Modifier
-                    .padding(horizontal = 8.dp, vertical = 4.dp)
+                    .padding(vertical = 4.dp, horizontal = 4.dp)
                     .size(32.dp)
             )
-            Column {
+            Column(
+                modifier = Modifier.padding(horizontal = 4.dp)
+            ) {
                 Text(text = label, fontWeight = FontWeight.Bold, color = Color(0xFFF2EFE7))
                 Spacer(modifier = Modifier.height(3.dp))
                 Text(text = text)
