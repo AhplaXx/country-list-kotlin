@@ -10,7 +10,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun RoundedLinearProgressIndicator(
+fun LinearProgressIndicator(
     progress: Float,
     color: Color = Color.Blue,
     trackColor: Color = Color.Cyan

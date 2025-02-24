@@ -45,7 +45,7 @@ import coil.request.ImageRequest
 import com.example.ulkeliste.R
 import com.example.ulkeliste.model.CountryModel
 import com.example.ulkeliste.ui.CountryUiState
-import com.example.ulkeliste.ui.components.RoundedLinearProgressIndicator
+import com.example.ulkeliste.ui.components.LinearProgressIndicator
 import kotlinx.coroutines.delay
 
 
@@ -154,7 +154,7 @@ fun LoadingScreen(){
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        RoundedLinearProgressIndicator(progress = progress, color = Color(0xFF2973B2), trackColor = Color(0xFFF2EFE7))
+        LinearProgressIndicator(progress = progress, color = Color(0xFF2973B2), trackColor = Color(0xFFF2EFE7))
 
     }
 }

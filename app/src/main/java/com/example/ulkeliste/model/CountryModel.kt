@@ -11,6 +11,9 @@ data class CountryModel(
     val name: Name? = null,
     val population: Int? = null,
     val flags: Flag? = null,
+    val coatOfArms: CoatOfArms? = null,
+    val capital: List<String> = emptyList(),
+    val region: String
 ) : Parcelable
 
 @Serializable
@@ -40,6 +43,11 @@ data class Flag(
     val png: String? = null,
     val svg: String? = null,
 ) : Parcelable
-
+@Serializable
+@Parcelize
+data class CoatOfArms(
+    val png: String? = null,
+    val svg: String? = null,
+): Parcelable
 
 
