@@ -30,21 +30,13 @@ import com.example.ulkeliste.ui.screens.HomePage
 
 @Composable
 fun CountryApp(){
-    val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
     val navController = rememberNavController()
 
 
 
     Scaffold(
-        modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
-        topBar = {
-            CountryTopAppBar(
-                scrollBehavior = scrollBehavior,
-                navigateUp = {navController.navigateUp()},
+        modifier = Modifier.fillMaxSize(),
 
-
-                )
-        }
 
     ) {
         Surface(modifier = Modifier.fillMaxSize()) {
@@ -59,19 +51,3 @@ fun CountryApp(){
 
 }
 
-@Composable
-fun CountryTopAppBar(navigateUp:()->Unit,scrollBehavior: TopAppBarScrollBehavior,modifier: Modifier = Modifier){
-CenterAlignedTopAppBar(scrollBehavior = scrollBehavior,
-    title = {Text(text = "Countries") },
-    navigationIcon = {
-
-        IconButton(onClick = { navigateUp() }) {
-            Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "Back")
-        }
-
-
-    }
-)
-
-
-}

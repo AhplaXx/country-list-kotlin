@@ -46,7 +46,7 @@ fun DetailScreen(navController: NavController){
     val decimalFormat = DecimalFormat("#,###")
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().background(color = Color(0xFFF2EFE7)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

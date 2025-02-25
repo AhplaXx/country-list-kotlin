@@ -1,6 +1,7 @@
 package com.example.ulkeliste.ui.screens
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -77,13 +78,13 @@ fun CountryCard(country: CountryModel,onClick: () -> Unit, modifier: Modifier = 
 
     Card(
         modifier = Modifier.padding(6.dp),
-        shape = RoundedCornerShape(4.dp),
+        shape = RoundedCornerShape(8.dp),
         elevation = CardDefaults.cardElevation(
-            defaultElevation = 4.dp
+            defaultElevation = 2.dp
         ),
         colors = CardDefaults.cardColors(
             containerColor = Color(0xFFF2EFE7),
-            contentColor = Color(0xFF2973B2)
+            contentColor = Color(0xFF48A6A7)
         ),
         onClick = onClick
 
@@ -114,7 +115,7 @@ fun CountryGridScreen(
     onClick: (CountryModel) -> Unit,
     contentPadding: PaddingValues =PaddingValues(8.dp),
 ) {
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(modifier = Modifier.fillMaxSize().background(color = Color(0xFF2973B2))) {
         LazyVerticalGrid(columns = GridCells.Fixed(1),modifier = Modifier.padding(top = 40.dp, start = 10.dp, end = 10.dp, bottom = 40.dp), contentPadding = contentPadding) {
             items(
                 items = countries.sortedBy { it.name?.common },
