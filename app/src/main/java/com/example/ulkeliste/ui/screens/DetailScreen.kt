@@ -54,7 +54,8 @@ fun DetailScreen(navController: NavController){
 
         country?.let {
             Row(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center
             ) {
                 AsyncImage(
                     modifier = Modifier
@@ -91,9 +92,9 @@ fun DetailScreen(navController: NavController){
                     icon = R.drawable.worldd_removebg_preview, label ="Country Name" , text =it.name?.common ?:"Unknown"
                 )
                 InfoSection(icon = R.drawable.un_removebg_preview, label ="UN Member" , text = if(it.unMember == true){"Yes"}else{"No"})
-                InfoSection(icon = R.drawable.lang_removebg_preview, label ="Population" , text = decimalFormat.format(it.population))
-                InfoSection(icon =R.drawable.lang_removebg_preview , label = "Capital(s)", text = it.capital.joinToString ( ", " ))
-                InfoSection(icon = R.drawable.worldd_removebg_preview, label ="Region" , text = it.region)
+                InfoSection(icon = R.drawable.person, label ="Population" , text = decimalFormat.format(it.population))
+                InfoSection(icon =R.drawable.building , label = "Capital(s)", text = it.capital.joinToString ( ", " ))
+                InfoSection(icon = R.drawable.lang_removebg_preview, label ="Region" , text = it.region)
             }
 
         }
