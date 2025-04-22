@@ -30,9 +30,9 @@ This is a simple and modern country list application built with Kotlin and Jetpa
 
 | Country List Screen | Country Detail Screen |
 |---------------------|------------------------|
-| ![country_list](https://github.com/user-attachments/assets/9176e7f0-ea19-4937-8cb2-16fa46d33d0a)
- | ![country_info](https://github.com/user-attachments/assets/f80c5afd-93d3-4b8b-8509-261b12c4d32c)
- |
+| ![country_list](https://github.com/user-attachments/assets/9176e7f0-ea19-4937-8cb2-16fa46d33d0a) |
+| ![country_info](https://github.com/user-attachments/assets/f80c5afd-93d3-4b8b-8509-261b12c4d32c) |
+
 
 
 
